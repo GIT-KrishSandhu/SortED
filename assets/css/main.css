@@ -1133,6 +1133,13 @@ section,
   text-align: center;
 }
 
+.portfolio-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
 .portfolio .portfolio-filters li {
   cursor: pointer;
   display: inline-block;
