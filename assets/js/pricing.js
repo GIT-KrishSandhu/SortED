@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     pricingSection.innerHTML = `
             <div class="container section-title" data-aos="fade-up">
                 <span>Pricing</span>
-                <h2>Choose Your Plan</h2>
+                <h2>Pricing</h2>
                 <p>Flexible pricing options designed for schools of all sizes</p>
             </div>
 

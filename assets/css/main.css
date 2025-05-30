@@ -18,7 +18,7 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #5f687b;  /* The default color of the main navmenu links */
-  --nav-hover-color: #10bc69; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #207ecf; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #5f687b; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -41,10 +41,10 @@
 }
 
 .accent-background {
-  --background-color: #10bc69;
+  --background-color: #126dbd;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #14eb83;
+  --surface-color: #207ecf;
   --contrast-color: #ffffff;
 }
 
@@ -98,7 +98,7 @@ h6 {
 .php-email-form .sent-message {
   display: none;
   color: #ffffff;
-  background: #059652;
+  background: #075ba4;
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
