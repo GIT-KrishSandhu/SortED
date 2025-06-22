@@ -1,172 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Home - SortED</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Home - SortED</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <!-- Favicons -->
+    <link href="assets/img/sf-logo.png" rel="icon" />
+    <!-- <link href="assets/img/sortedfavicon.png" rel="apple-touch-icon" /> -->
 
-  <!-- Favicons -->
-  <link href="assets/img/sf-logo.png" rel="icon">
-  <link href="assets/img/sortedfavicon.png" rel="apple-touch-icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/pricing.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/pricing.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
-</head>
+    
+    <style>
+      /* Perfect alignment for contact section */
+      .contact .info-wrap {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
 
-<body class="index-page">
+      .contact .info-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 0;
+      }
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      .contact .info-item i {
+        font-size: 20px;
+        color: #007bff;
+        margin-right: 15px;
+        margin-top: 8px;
+        flex-shrink: 0;
+      }
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/sf-logo.png" alt="">
-        <h1 class="sitename">SortED</h1>
-      </a>
+      .contact .info-item h3 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #333;
+      }
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#product">Products</a></li>
-          <li><a href="#sortedday">SortED Day</a></li>
-          <li><a href="#price">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+      .contact .info-item p {
+        margin-bottom: 0;
+        color: #666;
+        line-height: 1.6;
+      }
 
-      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+      /* Ensure form fields have consistent height */
+      .contact .form-control {
+        border: 2px solid #e9ecef;
+        border-radius: 8px;
+        padding: 12px 15px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
 
-    </div>
-  </header>
+      .contact .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
 
-  <main class="main">
+      /* Perfect spacing for form rows */
+      .contact .row.gy-4 > * {
+        margin-bottom: 1.5rem;
+      }
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
+      /* Responsive adjustments */
+      @media (max-width: 991px) {
+        .contact .info-item {
+          margin-bottom: 30px !important;
+        }
+      }
 
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
-            <h1>Empowering Schools with Smart Learning</h1>
-            <p>Manage academics, faculty, and student engagement in one integrated platform, powered by AI.</p>
-            <div class="d-flex">
-              <a href="product-details.html" class="btn-get-started">Get Started</a>
-              <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
+      /* Custom styles for form messages */
+      .form-messages {
+        margin-bottom: 20px;
+      }
+      
+      .loading {
+        display: none;
+        text-align: center;
+        color: #007bff;
+        font-weight: 500;
+      }
+      
+      .error-message {
+        display: none;
+        background-color: #dc3545;
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        text-align: center;
+        font-weight: 500;
+      }
+      
+      .sent-message {
+        display: none;
+        background-color: #28a745;
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        text-align: center;
+        font-weight: 500;
+      }
+      
+      .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+      
+      button[type="submit"]:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    </style>
+
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center"
+      >
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="assets/img/sf-logo.png" alt="" />
+          <h1 class="sitename">SortED</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#product">Products</a></li>
+            <li><a href="#sortedday">SortED Day</a></li>
+            <li><a href="#price">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section">
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
+              data-aos="fade-up"
+            >
+              <h1>Empowering Schools with Smart Learning</h1>
+              <p>
+                Manage academics, faculty, and student engagement in one
+                integrated platform, powered by AI.
+              </p>
+              <div class="d-flex">
+                <a href="product-details.html" class="btn-get-started"
+                  >Get Started</a
+                >
+                <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
+              </div>
             </div>
-          </div>
-          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="100">
-            <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+            <div
+              class="col-lg-6 order-1 order-lg-2 hero-img"
+              data-aos="zoom-out"
+              data-aos-delay="100"
+            >
+              <img
+                src="assets/img/hero-img.png"
+                class="img-fluid animated"
+                alt=""
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <!-- /Hero Section -->
 
-    </section>
-    <!-- /Hero Section -->
-
-    <!-- Featured Services Section -->
-    <section id="featured-services" class="featured-services section">
-
-      <div class="container">
-
-        <div class="row gy-3">
-
-          <div class="col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi-bar-chart-line icon"></i></div>
-              <h4><a href="" class="stretched-link">LMS for Academic Excellence</a></h4>
-              <!-- <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p> -->
+      <!-- Featured Services Section -->
+      <section id="featured-services" class="featured-services section">
+        <div class="container">
+          <div class="row gy-3">
+            <div
+              class="col-lg-3 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-item position-relative">
+                <div class="icon"><i class="bi-bar-chart-line icon"></i></div>
+                <h4>LMS for Academic Excellence</h4>
+                <!-- <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p> -->
+              </div>
             </div>
-          </div><!-- End Service Item -->
+            <!-- End Service Item -->
 
-          <div class="col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-activity icon"></i></div>
-              <h4><a href="" class="stretched-link">HRMS for Faculty Efficiency</a></h4>
-              <!-- <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p> -->
+            <div
+              class="col-lg-3 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="service-item position-relative">
+                <div class="icon"><i class="bi bi-activity icon"></i></div>
+                <h4>HRMS for Faculty Efficiency</h4>
+                <!-- <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p> -->
+              </div>
             </div>
-          </div><!-- End Service Item -->
+            <!-- End Service Item -->
 
-          <div class="col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-folder icon"></i></div>
-              <h4><a href="" class="stretched-link">AI-Driven Student and Faculty Reports</a></h4>
-              <!-- <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p> -->
+            <div
+              class="col-lg-3 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="service-item position-relative">
+                <div class="icon"><i class="bi bi-folder icon"></i></div>
+                <h4>AI-Driven Student and Faculty Reports</h4>
+                <!-- <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p> -->
+              </div>
             </div>
-          </div><!-- End Service Item -->
+            <!-- End Service Item -->
 
-          <div class="col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-              <h4><a href="" class="stretched-link">Events and Communities via SortED Day</a></h4>
-              <!-- <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p> -->
+            <div
+              class="col-lg-3 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-calendar4-week icon"></i>
+                </div>
+                <h4>Events and Communities via SortED Day</h4>
+                <!-- <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p> -->
+              </div>
             </div>
-          </div><!-- End Service Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Featured Services Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>About Us<br></span>
-        <h2>About Us</h2>
-        <p>SortED is a smart Learning Management and Human Resource Management System designed exclusively for schools.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/about.png" class="img-fluid" alt="">
-            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
-          </div>
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
-            <!-- <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>  -->
-            <p class="fst-italic">
-              SortED helps schools manage academics, faculty, and student engagement through an integrated platform powered by AI.
-            </p>
-            <ul>
-              <li><i class="bi bi-check2-all"></i> <span>Streamline academic workflows with our AI-enabled Learning Management System (LMS).</span></li>
-              <li><i class="bi bi-check2-all"></i> <span>Enhance staff productivity using Human Resource Management System (HRMS) tools.</span></li>
-              <li><i class="bi bi-check2-all"></i> <span>Leverage AI-powered reports for predictive GPA modeling, faculty evaluation, and workload analytics.</span></li>
-            </ul>
-            <p>
-              SortED combines LMS, HRMS, and AI analytics into one powerful solution for schools. From managing digital assignments to tracking faculty attendance and organizing school events, SortED is designed to transform education operations with innovation and simplicity.
-            </p>
+            <!-- End Service Item -->
           </div>
         </div>
+      </section>
+      <!-- /Featured Services Section -->
 
-      </div>
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <span>About Us<br /></span>
+          <h2>About Us</h2>
+          <p>
+            SortED is a smart Learning Management and Human Resource Management
+            System designed exclusively for schools.
+          </p>
+        </div>
+        <!-- End Section Title -->
 
-    </section>
-    <!-- /About Section -->
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-6 position-relative align-self-start"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img src="assets/img/about.png" class="img-fluid" alt="" />
+              <a
+                href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+                class="glightbox pulsating-play-btn"
+              ></a>
+            </div>
+            <div
+              class="col-lg-6 content"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <!-- <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>  -->
+              <p class="fst-italic">
+                SortED helps schools manage academics, faculty, and student
+                engagement through an integrated platform powered by AI.
+              </p>
+              <ul>
+                <li>
+                  <i class="bi bi-check2-all"></i>
+                  <span
+                    >Streamline academic workflows with our AI-enabled Learning
+                    Management System (LMS).</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check2-all"></i>
+                  <span
+                    >Enhance staff productivity using Human Resource Management
+                    System (HRMS) tools.</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check2-all"></i>
+                  <span
+                    >Leverage AI-powered reports for predictive GPA modeling,
+                    faculty evaluation, and workload analytics.</span
+                  >
+                </li>
+              </ul>
+              <p>
+                SortED combines LMS, HRMS, and AI analytics into one powerful
+                solution for schools. From managing digital assignments to
+                tracking faculty attendance and organizing school events, SortED
+                is designed to transform education operations with innovation
+                and simplicity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /About Section -->
 
-    <!-- Stats Section -->
-    <!-- <section id="stats" class="stats section">
+      <!-- Stats Section -->
+      <!-- <section id="stats" class="stats section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -206,190 +392,303 @@
 
     </section>/Stats Section -->
 
-    <!-- Services Section -->
-    <section id="product" class="services section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Products</span>
-        <h2>Products</h2>
-        <p></p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-md-6 col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-activity"></i>
-              </div>
-              <a href="product-details.html" class="stretched-link">
-                <h3>Learning Management System (LMS)</h3>
-              </a>
-              <p>AI-powered study plans, instant doubt-solving, gamified quizzes, academic reels, and real-time student progress reports — all tailored for personalized learning.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-md-6 col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-broadcast"></i>
-              </div>
-              <a href="product-details.html" class="stretched-link">
-                <h3>Human Resource Management System (HRMS)</h3>
-              </a>
-              <p>Manage attendance, leave, payroll, recruitment, and compliance. Gain AI insights into faculty workload, burnout risk, and performance tracking.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-md-6 col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-easel"></i>
-              </div>
-              <a href="product-details.html" class="stretched-link">
-                <h3>AI-Based Reporting</h3>
-              </a>
-              <p>Utilize predictive GPA models, student risk alerts, and subject-wise performance heatmaps. Get explainable insights for smarter academic decisions.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-md-6 col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-bounding-box-circles"></i>
-              </div>
-              <a href="product-details.html" class="stretched-link">
-                <h3>SortED Day & Communities</h3>
-              </a>
-              <p>Monthly events that celebrate talent and collaboration in sports, arts, debate, coding, and more. AI matches students to ideal clubs and tracks progress.</p>
-            </div>
-          </div><!-- End Service Item -->
-
+      <!-- Services Section -->
+      <section id="product" class="services section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <span>Products</span>
+          <h2>Products</h2>
+          <p></p>
         </div>
-      </div>
+        <!-- End Section Title -->
 
-
-    </section>
-    <!-- /Services Section -->
-
-    <!-- Portfolio Section -->
-    <section id="sortedday" class="portfolio section">
-
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <span>SortED Day</span>
-      <h2>SortED Day</h2>
-      <p>A full-day, school-hosted event featuring competitions, 
-        workshops, and community showcases across sports, academics, and arts.</p>
-    </div><!-- End Section Title -->
-
-    <div class="container">
-
-      <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-        <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-sports">Sports</li>
-          <li data-filter=".filter-academics">Academics</li>
-          <li data-filter=".filter-arts">Arts</li>
-          <li data-filter=".filter-tech">Innovation</li>
-        </ul><!-- End Portfolio Filters -->
-
-        <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-          <!-- Sports Activity -->
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-sports">
-            <img src="assets/img/portfolio/sports-football.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Football Tournament</h4>
-              <p>Inter-house football matches encouraging teamwork and discipline.</p>
-              <!-- <a href="assets/img/portfolio/sports-football.jpg" class="glightbox preview-link" title="Football Tournament"><i class="bi bi-zoom-in"></i></a> -->
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-md-6 col-lg-6 mb-4"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-activity"></i>
+                </div>
+                <a href="product-details.html" class="stretched-link">
+                  <h3>Learning Management System (LMS)</h3>
+                </a>
+                <p>
+                  AI-powered study plans, instant doubt-solving, gamified
+                  quizzes, academic reels, and real-time student progress
+                  reports — all tailored for personalized learning.
+                </p>
+              </div>
             </div>
-          </div>
+            <!-- End Service Item -->
 
-          <!-- Academic Activity -->
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-academics">
-            <img src="assets/img/portfolio/academics-quiz.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Science Quiz</h4>
-              <p>Compete in challenging science quizzes to test knowledge and speed.</p>
-              <!-- <a href="assets/img/portfolio/academics-quiz.jpg" class="glightbox preview-link" title="Science Quiz"><i class="bi bi-zoom-in"></i></a> -->
+            <div
+              class="col-md-6 col-lg-6 mb-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-broadcast"></i>
+                </div>
+                <a href="product-details.html" class="stretched-link">
+                  <h3>Human Resource Management System (HRMS)</h3>
+                </a>
+                <p>
+                  Manage attendance, leave, payroll, recruitment, and
+                  compliance. Gain AI insights into faculty workload, burnout
+                  risk, and performance tracking.
+                </p>
+              </div>
             </div>
-          </div>
+            <!-- End Service Item -->
 
-          <!-- Arts Activity -->
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-arts">
-            <img src="assets/img/portfolio/arts-drama.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Drama Showcase</h4>
-              <p>Stage performances on social themes, building confidence and expression.</p>
-              <!-- <a href="assets/img/portfolio/arts-drama.jpg" class="glightbox preview-link" title="Drama Showcase"><i class="bi bi-zoom-in"></i></a> -->
+            <div
+              class="col-md-6 col-lg-6 mb-4"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-easel"></i>
+                </div>
+                <a href="product-details.html" class="stretched-link">
+                  <h3>AI-Based Reporting</h3>
+                </a>
+                <p>
+                  Utilize predictive GPA models, student risk alerts, and
+                  subject-wise performance heatmaps. Get explainable insights
+                  for smarter academic decisions.
+                </p>
+              </div>
             </div>
-          </div>
+            <!-- End Service Item -->
 
-          <!-- Innovation Activity -->
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tech">
-            <img src="assets/img/portfolio/tech-hackathon.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Student Hackathon</h4>
-              <p>Code, build, and pitch ideas in teams to solve real-world problems in tech.</p>
-              <!-- <a href="assets/img/portfolio/tech-hackathon.jpg" class="glightbox preview-link" title="Student Hackathon"><i class="bi bi-zoom-in"></i></a> -->
+            <div
+              class="col-md-6 col-lg-6 mb-4"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-bounding-box-circles"></i>
+                </div>
+                <a href="product-details.html" class="stretched-link">
+                  <h3>SortED Day & Communities</h3>
+                </a>
+                <p>
+                  Monthly events that celebrate talent and collaboration in
+                  sports, arts, debate, coding, and more. AI matches students to
+                  ideal clubs and tracks progress.
+                </p>
+              </div>
             </div>
+            <!-- End Service Item -->
           </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
 
-          <!-- Additional Sports Activity -->
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-sports">
-            <img src="assets/img/portfolio/sports-basketball.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Basketball Challenge</h4>
-              <p>Fast-paced basketball matches to boost athletic spirit and coordination.</p>
-              <!-- <a href="assets/img/portfolio/sports-basketball.jpg" class="glightbox preview-link" title="Basketball Challenge"><i class="bi bi-zoom-in"></i></a> -->
+      <!-- Portfolio Section -->
+      <section id="sortedday" class="portfolio section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <span>SortED Day</span>
+          <h2>SortED Day</h2>
+          <p>
+            A full-day, school-hosted event featuring competitions, workshops,
+            and community showcases across sports, academics, and arts.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div
+            class="isotope-layout"
+            data-default-filter="*"
+            data-layout="masonry"
+            data-sort="original-order"
+          >
+            <ul
+              class="portfolio-filters isotope-filters"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-sports">Sports</li>
+              <li data-filter=".filter-academics">Academics</li>
+              <li data-filter=".filter-arts">Arts</li>
+              <li data-filter=".filter-tech">Innovation</li>
+            </ul>
+            <!-- End Portfolio Filters -->
+
+            <div
+              class="row gy-4 isotope-container"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <!-- Sports Activity -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-sports"
+              >
+                <img
+                  src="assets/img/portfolio/sports-football.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Football Tournament</h4>
+                  <p>
+                    Inter-house football matches encouraging teamwork and
+                    discipline.
+                  </p>
+                  <!-- <a href="assets/img/portfolio/sports-football.jpg" class="glightbox preview-link" title="Football Tournament"><i class="bi bi-zoom-in"></i></a> -->
+                </div>
+              </div>
+
+              <!-- Academic Activity -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-academics"
+              >
+                <img
+                  src="assets/img/portfolio/academics-quiz.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Science Quiz</h4>
+                  <p>
+                    Compete in challenging science quizzes to test knowledge and
+                    speed.
+                  </p>
+                  <!-- <a href="assets/img/portfolio/academics-quiz.jpg" class="glightbox preview-link" title="Science Quiz"><i class="bi bi-zoom-in"></i></a> -->
+                </div>
+              </div>
+
+              <!-- Arts Activity -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-arts"
+              >
+                <img
+                  src="assets/img/portfolio/arts-drama.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Drama Showcase</h4>
+                  <p>
+                    Stage performances on social themes, building confidence and
+                    expression.
+                  </p>
+                  <!-- <a href="assets/img/portfolio/arts-drama.jpg" class="glightbox preview-link" title="Drama Showcase"><i class="bi bi-zoom-in"></i></a> -->
+                </div>
+              </div>
+
+              <!-- Innovation Activity -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tech"
+              >
+                <img
+                  src="assets/img/portfolio/tech-hackathon.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Student Hackathon</h4>
+                  <p>
+                    Code, build, and pitch ideas in teams to solve real-world
+                    problems in tech.
+                  </p>
+                  <!-- <a href="assets/img/portfolio/tech-hackathon.jpg" class="glightbox preview-link" title="Student Hackathon"><i class="bi bi-zoom-in"></i></a> -->
+                </div>
+              </div>
+
+              <!-- Additional Sports Activity -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-sports"
+              >
+                <img
+                  src="assets/img/portfolio/sports-basketball.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Basketball Challenge</h4>
+                  <p>
+                    Fast-paced basketball matches to boost athletic spirit and
+                    coordination.
+                  </p>
+                  <!-- <a href="assets/img/portfolio/sports-basketball.jpg" class="glightbox preview-link" title="Basketball Challenge"><i class="bi bi-zoom-in"></i></a> -->
+                </div>
+              </div>
+
+              <!-- Additional Academic Activity -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-academics"
+              >
+                <img
+                  src="assets/img/portfolio/academics-debate.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Debate Competition</h4>
+                  <p>
+                    Sharpen critical thinking and public speaking through
+                    structured debates.
+                  </p>
+                  <!-- <a href="assets/img/portfolio/academics-debate.jpg" class="glightbox preview-link" title="Debate Competition"><i class="bi bi-zoom-in"></i></a> -->
+                </div>
+              </div>
+
+              <!-- Additional Arts Activity -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-arts"
+              >
+                <img
+                  src="assets/img/portfolio/arts-art.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Live Art Competition</h4>
+                  <p>
+                    Paint, sketch, or craft live on campus — creativity
+                    unleashed on canvas.
+                  </p>
+                  <!-- <a href="assets/img/portfolio/arts-art.jpg" class="glightbox preview-link" title="Live Art Competition"><i class="bi bi-zoom-in"></i></a> -->
+                </div>
+              </div>
+
+              <!-- Additional Tech Activity -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tech"
+              >
+                <img
+                  src="assets/img/portfolio/tech-robotics.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Robotics Showcase</h4>
+                  <p>
+                    Students present custom-built robots in a demo-and-compete
+                    format.
+                  </p>
+                  <!-- <a href="assets/img/portfolio/tech-robotics.jpg" class="glightbox preview-link" title="Robotics Showcase"><i class="bi bi-zoom-in"></i></a> -->
+                </div>
+              </div>
             </div>
+            <!-- End Portfolio Container -->
           </div>
+        </div>
+      </section>
+      <!-- /Portfolio Section -->
 
-          <!-- Additional Academic Activity -->
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-academics">
-            <img src="assets/img/portfolio/academics-debate.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Debate Competition</h4>
-              <p>Sharpen critical thinking and public speaking through structured debates.</p>
-              <!-- <a href="assets/img/portfolio/academics-debate.jpg" class="glightbox preview-link" title="Debate Competition"><i class="bi bi-zoom-in"></i></a> -->
-            </div>
-          </div>
-
-          <!-- Additional Arts Activity -->
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-arts">
-            <img src="assets/img/portfolio/arts-art.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Live Art Competition</h4>
-              <p>Paint, sketch, or craft live on campus — creativity unleashed on canvas.</p>
-              <!-- <a href="assets/img/portfolio/arts-art.jpg" class="glightbox preview-link" title="Live Art Competition"><i class="bi bi-zoom-in"></i></a> -->
-            </div>
-          </div>
-
-          <!-- Additional Tech Activity -->
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tech">
-            <img src="assets/img/portfolio/tech-robotics.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Robotics Showcase</h4>
-              <p>Students present custom-built robots in a demo-and-compete format.</p>
-              <!-- <a href="assets/img/portfolio/tech-robotics.jpg" class="glightbox preview-link" title="Robotics Showcase"><i class="bi bi-zoom-in"></i></a> -->
-            </div>
-          </div>
-
-        </div><!-- End Portfolio Container -->
-
-      </div>
-
-    </div>
-
-  </section>
-  <!-- /Portfolio Section -->
-
-    <!-- Testimonials Section 
+      <!-- Testimonials Section 
     <section id="testimonials" class="testimonials section light-background">
 
       <div class="container section-title" data-aos="fade-up">
@@ -501,199 +800,316 @@
 
     </section> Testimonials Section -->
 
-    <!-- Pricing section -->
-    <section id="price" class="pricing section">
+      <!-- Pricing section -->
+      <section id="price" class="pricing section">
         <!-- Content will be dynamically generated by JavaScript -->
-    </section>
+      </section>
 
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section accent-background">
-
-    <div class="container">
-      <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-        <div class="col-xl-10">
-          <div class="text-center">
-            <h3>Bring SortED to your Institution now!</h3>
-            <p>Empower your school with AI-driven tools that unlock every student's full potential — from classrooms to communities.</p>
-            <blockquote>
-              "Education is not the filling of a pail, but the lighting of a fire." — William Butler Yeats
-            </blockquote>
-            <a class="cta-btn" href="#">Transform Your School Today</a>
+      <!-- Call To Action Section -->
+      <section
+        id="call-to-action"
+        class="call-to-action section accent-background"
+      >
+        <div class="container">
+          <div
+            class="row justify-content-center"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="col-xl-10">
+              <div class="text-center">
+                <h3>Bring SortED to your Institution now!</h3>
+                <p>
+                  Empower your school with AI-driven tools that unlock every
+                  student's full potential — from classrooms to communities.
+                </p>
+                <blockquote>
+                  "Education is not the filling of a pail, but the lighting of a
+                  fire." — William Butler Yeats
+                </blockquote>
+                <a class="cta-btn" href="#price">Transform Your School Today</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+      <!-- /Call To Action Section -->
 
-  </section>
-
-
-    </section><!-- /Call To Action Section -->
-
-    <!-- Team Section -->
-    <section id="team" class="team section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Team</span>
-        <h2>Team</h2>
-        <p>Meet the faces behind SortED</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-5">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
+      <!-- Team Section -->
+      <!-- <section id="team" class="team section">
+        <!-- Section Title 
+        <div class="container section-title" data-aos="fade-up">
+          <span>Team</span>
+          <h2>Team</h2>
+          <p>Meet the faces behind SortED</p>
         </div>
+        <!-- End Section Title 
 
-      </div>
-
-    </section><!-- /Team Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Contact Us</span>
-        <h2>Contact Us</h2>
-        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>SortED EdTech Pvt. Ltd. <br> New Delhi, India</p>
+        <div class="container">
+          <div class="row gy-5">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="member">
+                <div class="pic">
+                  <img
+                    src="assets/img/team/team-1.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
                 </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+91-987 654 3210</p>
+                <div class="member-info">
+                  <h4>Walter White</h4>
+                  <span>Chief Executive Officer</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
                 </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>hello@sortededtech.com</p>
-                </div>
-              </div><!-- End Info Item -->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6996.552777575345!2d77.12945036300593!3d28.741163802015087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d01100f85318d%3A0xd014620fe3ce864e!2sSector%2018%2C%20Rohini%2C%20Delhi!5e0!3m2!1sen!2sin!4v1747058954617!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
+            </div>
+            <!-- End Team Member 
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="member">
+                <div class="pic">
+                  <img
+                    src="assets/img/team/team-2.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>Sarah Jhonson</h4>
+                  <span>Product Manager</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member 
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="member">
+                <div class="pic">
+                  <img
+                    src="assets/img/team/team-3.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>William Anderson</h4>
+                  <span>CTO</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member 
           </div>
+        </div>
+      </section> -->
+      <!-- /Team Section -->
 
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="subject-field" class="pb-2">Your Phone Number</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="subject-field" class="pb-2">School Name </label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
+      
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+        <div class="container section-title" data-aos="fade-up">
+          <span>Contact Us</span>
+          <h2>Contact Us</h2>
         </div>
 
-      </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-5">
+              <div class="info-wrap">
+                <!-- Address Info - Aligned with Name/Email row -->
+                <div
+                  class="info-item d-flex align-items-start"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  style="margin-bottom: 60px;"
+                >
+                  <i class="bi bi-geo-alt flex-shrink-0" style="margin-top: 8px;"></i>
+                  <div>
+                    <h3>Address</h3>
+                    <p>
+                      SortED EdTech Pvt. Ltd. <br />
+                      New Delhi, India
+                    </p>
+                  </div>
+                </div>
 
-    </section>
-    <!-- /Contact Section -->
+                <!-- Phone Info - Aligned with Phone/School row -->
+                <div
+                  class="info-item d-flex align-items-start"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  style="margin-bottom: 60px;"
+                >
+                  <i class="bi bi-telephone flex-shrink-0" style="margin-top: 8px;"></i>
+                  <div>
+                    <h3>Call Us</h3>
+                    <p>+91 837 797 9522</p>
+                  </div>
+                </div>
 
-  </main>
+                <!-- Email Info - Aligned with Message field -->
+                <div
+                  class="info-item d-flex align-items-start"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                  style="margin-bottom: 30px;"
+                >
+                  <i class="bi bi-envelope flex-shrink-0" style="margin-top: 8px;"></i>
+                  <div>
+                    <h3>Email Us</h3>
+                    <p>sort.ed.mail1@gmail.com</p>
+                  </div>
+                </div>
 
-  <footer id="footer" class="footer">
+                <!-- Map -->
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6996.552777575345!2d77.12945036300593!3d28.741163802015087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d01100f85318d%3A0xd014620fe3ce864e!2sSector%2018%2C%20Rohini%2C%20Delhi!5e0!3m2!1sen!2sin!4v1747058954617!5m2!1sen!2sin"
+                  frameborder="0"
+                  style="border: 0; width: 100%; height: 270px; border-radius: 8px;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
 
-    <!-- <div class="footer-newsletter">
+            <div class="col-lg-7">
+              <!-- Form Messages -->
+              <div class="form-messages">
+                <div id="loading" class="loading">
+                  <i class="bi bi-arrow-clockwise" style="animation: spin 1s linear infinite;"></i>
+                  Sending your message...
+                </div>
+                <div id="error-message" class="error-message"></div>
+                <div id="sent-message" class="sent-message"></div>
+              </div>
+
+              <!-- Contact Form -->
+              <form
+                id="contact-form"
+                class="php-email-form"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                novalidate
+              >
+                <div class="row gy-4">
+                  <!-- Name and Email Row - Perfectly aligned with Address -->
+                  <div class="col-md-6">
+                    <label for="name-field" class="pb-2">Your Name *</label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name-field"
+                      class="form-control"
+                      required
+                      placeholder="Enter your full name"
+                      style="height: 50px;"
+                    />
+                    <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="email-field" class="pb-2">Your Email *</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email-field"
+                      required
+                      placeholder="Enter your email address"
+                      style="height: 50px;"
+                    />
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                  </div>
+
+                  <!-- Phone and School Row - Perfectly aligned with Call Us -->
+                  <div class="col-md-6">
+                    <label for="phone-field" class="pb-2">Your Phone Number *</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      name="phone"
+                      id="phone-field"
+                      required
+                      placeholder="Enter your phone number"
+                      style="height: 50px;"
+                    />
+                    <div class="invalid-feedback">Please enter your phone number.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="school-field" class="pb-2">School Name *</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="school"
+                      id="school-field"
+                      required
+                      placeholder="Enter your school name"
+                      style="height: 50px;"
+                    />
+                    <div class="invalid-feedback">Please enter your school name.</div>
+                  </div>
+
+                  <!-- Message Field - Aligned with Email Us -->
+                  <div class="col-md-12">
+                    <label for="message-field" class="pb-2">Message *</label>
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      rows="6"
+                      id="message-field"
+                      required
+                      placeholder="Enter your message here..."
+                      style="min-height: 150px;"
+                    ></textarea>
+                    <div class="invalid-feedback">Please enter your message.</div>
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                    <button type="submit" id="submit-btn" class="btn btn-primary" style="padding: 12px 40px; font-size: 16px; border-radius: 25px;">
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Contact Section -->
+    </main>
+
+    <footer id="footer" class="footer">
+      <!-- <div class="footer-newsletter">
       <div class="container">
         <div class="row justify-content-center text-center">
           <div class="col-lg-6">
@@ -710,80 +1126,304 @@
       </div>
     </div> -->
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="d-flex align-items-center">
-            <span class="sitename">SortED</span>
-          </a>
-          <div class="footer-contact pt-3">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="d-flex align-items-center">
+              <span class="sitename">SortED</span>
+            </a>
+            <div class="footer-contact pt-3">
             <p>SortED EdTech Pvt. Ltd.</p>
             <p>New Delhi, India</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+91 987 654 3210</span></p>
-            <p><strong>Email:</strong> <span>hello@sortededtech.com</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 837 797 9522</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 997 188 8515</span></p>
+            <p><strong>Email:</strong> <span>sort.ed.mail1@gmail.com</span></p>
+          </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="#about">About us</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="#product">Product</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i> <a href="#price">Pricing</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="product-details.html">LMS - Student Management</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="product-details.html">HRMS - Faculty Efficiency</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="product-details.html">AI Based Reporting</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="product-details.html">SortED Day</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-12">
+            <h4>Follow Us</h4>
+            <!-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> -->
+            <div class="social-links d-flex">
+              <!-- <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a> -->
+              <a href="https://www.instagram.com/sort.edtech/"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/sorted-education-sortified/posts/?feedView=all"><i class="bi bi-linkedin"></i></a>
+            </div>
           </div>
         </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#product">Product</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#price">Pricing</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="product-details.html">LMS - Student Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#product">HRMS - Faculty Efficiency</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#product">AI Based Reporting</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#product">SortED Day</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-12">
-          <h4>Follow Us</h4>
-          <!-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> -->
-          <div class="social-links d-flex">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
       </div>
-    </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">SortED</strong> <span>All Rights Reserved</span></p>
-    </div>
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">SortED</strong>
+          <span>All Rights Reserved</span>
+        </p>
+      </div>
+    </footer>
 
-  </footer>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/pricing.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/pricing.js"></script>
+    <style>
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
 
-</body>
+    <script>
+      // Contact Form Handler
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contact-form");
+        const loading = document.getElementById("loading");
+        const errorMessage = document.getElementById("error-message");
+        const sentMessage = document.getElementById("sent-message");
+        const submitBtn = document.getElementById("submit-btn");
 
+        // Check if form exists
+        if (!form) {
+          console.error("Contact form not found!");
+          return;
+        }
+
+        // Function to show message
+        function showMessage(element, message, isError = false) {
+          // Hide all messages first
+          loading.style.display = 'none';
+          errorMessage.style.display = 'none';
+          sentMessage.style.display = 'none';
+          
+          // Show the specific message
+          if (element) {
+            element.textContent = message;
+            element.style.display = 'block';
+          }
+        }
+
+        // Function to validate email
+        function isValidEmail(email) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        }
+
+        // Function to validate phone
+        function isValidPhone(phone) {
+          const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+          return phoneRegex.test(phone.replace(/[\s\-$$$$]/g, ''));
+        }
+
+        // Form submission handler
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault(); // Prevent default form submission
+          
+          console.log("Form submission started");
+          
+          // Get form data
+          const formData = {
+            name: document.getElementById('name-field').value.trim(),
+            email: document.getElementById('email-field').value.trim(),
+            phone: document.getElementById('phone-field').value.trim(),
+            school: document.getElementById('school-field').value.trim(),
+            message: document.getElementById('message-field').value.trim()
+          };
+
+          console.log("Form data:", formData);
+
+          // Client-side validation
+          let isValid = true;
+          let errorMsg = '';
+
+          if (!formData.name) {
+            errorMsg = 'Please enter your name.';
+            isValid = false;
+          } else if (!formData.email) {
+            errorMsg = 'Please enter your email address.';
+            isValid = false;
+          } else if (!isValidEmail(formData.email)) {
+            errorMsg = 'Please enter a valid email address.';
+            isValid = false;
+          } else if (!formData.phone) {
+            errorMsg = 'Please enter your phone number.';
+            isValid = false;
+          } else if (!isValidPhone(formData.phone)) {
+            errorMsg = 'Please enter a valid phone number.';
+            isValid = false;
+          } else if (!formData.school) {
+            errorMsg = 'Please enter your school name.';
+            isValid = false;
+          } else if (!formData.message) {
+            errorMsg = 'Please enter your message.';
+            isValid = false;
+          } else if (formData.message.length < 10) {
+            errorMsg = 'Please enter a message with at least 10 characters.';
+            isValid = false;
+          }
+
+          if (!isValid) {
+            showMessage(errorMessage, errorMsg, true);
+            return;
+          }
+
+          // Show loading state
+          showMessage(loading, 'Sending your message...');
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending...';
+
+          try {
+            console.log("Sending request to server...");
+            
+            // Make the API request
+            const response = await fetch('/submit-contact', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(formData)
+            });
+
+            console.log("Response status:", response.status);
+            console.log("Response ok:", response.ok);
+
+            // Check if the response is ok
+            if (!response.ok) {
+              throw new Error(`Server error: ${response.status} ${response.statusText}`);
+            }
+
+            // Get response text first
+            const responseText = await response.text();
+            console.log("Response text:", responseText);
+
+            // Check if response is empty
+            if (!responseText) {
+              throw new Error('Empty response from server');
+            }
+
+            // Try to parse JSON
+            let result;
+            try {
+              result = JSON.parse(responseText);
+            } catch (parseError) {
+              console.error("JSON parse error:", parseError);
+              throw new Error('Invalid response format from server');
+            }
+
+            console.log("Parsed result:", result);
+
+            // Handle the response
+            if (result.status === 'success') {
+              showMessage(sentMessage, result.message || 'Your message has been sent successfully! We will get back to you soon.');
+              form.reset(); // Clear the form
+            } else {
+              showMessage(errorMessage, result.message || 'There was an error sending your message. Please try again.', true);
+            }
+
+          } catch (error) {
+            console.error('Form submission error:', error);
+            
+            // Determine error message based on error type
+            let errorMsg = 'Network error. Please check your connection and try again.';
+            
+            if (error.message.includes('Server error')) {
+              errorMsg = 'Server error. Please try again later or contact us directly.';
+            } else if (error.message.includes('Failed to fetch')) {
+              errorMsg = 'Unable to connect to server. Please check if the server is running and try again.';
+            } else if (error.message.includes('Invalid response')) {
+              errorMsg = 'Server response error. Please try again or contact us directly.';
+            }
+            
+            showMessage(errorMessage, errorMsg, true);
+          } finally {
+            // Reset button state
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+          }
+        });
+
+        // Real-time validation feedback
+        const inputs = form.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+          input.addEventListener('blur', function() {
+            if (this.value.trim() === '') {
+              this.classList.add('is-invalid');
+            } else {
+              this.classList.remove('is-invalid');
+              this.classList.add('is-valid');
+            }
+          });
+
+          input.addEventListener('input', function() {
+            if (this.classList.contains('is-invalid') && this.value.trim() !== '') {
+              this.classList.remove('is-invalid');
+              this.classList.add('is-valid');
+            }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
